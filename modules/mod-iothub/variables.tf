@@ -14,7 +14,7 @@ variable resourceGroupName {}
 
 #=== IotHub
 variable iothubName {
-    default = "racadvexample"
+    default = "example"
 }
 variable iothubSkuName {
     default = "S1"
