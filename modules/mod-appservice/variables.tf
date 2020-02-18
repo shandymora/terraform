@@ -25,5 +25,5 @@ variable defaultDocuments {
         "hostingstart.html"
     ]
 }
-#=== Staging Slot 
+#=== Slot 
 variable slotName { default = "staging" }   /* Slot name */

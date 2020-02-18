@@ -19,7 +19,7 @@ resource "azurerm_app_service" "appservice" {
     }
 }
 
-resource "azurerm_app_service_slot" "stagingslot" {
+resource "azurerm_app_service_slot" "slot" {
     name                    = var.slotName
     app_service_name        = azurerm_app_service.as.name
     location                = var.region
