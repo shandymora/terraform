@@ -1,5 +1,13 @@
 /*
-	Retrieve secrets from keyvault and return back to terraform
+    Retrieve secrets from keyvault and return back to terraform
+    Execute under powershell
+    Ensure the necessary environment variables have been set:
+        TF_VAR_keyVaultSubscriptionId
+        TF_VAR_keyVaultName
+        TF_VAR_clientId
+        TF_VAR_clientSecret
+        TF_VAR_clientSecret
+        TF_VAR_tenantId
 */
 var https       = require('https');
 var url         = require('url');
@@ -40,7 +48,7 @@ if ('TF_VAR_clientSecret' in process.env) {
     console.log('Client Secret environment variable, TF_VAR_clientSecret not set');
     process.exit(1);
 }
-if ('TF_VAR_tenant' in process.env) { 
+if ('TF_VAR_tenantId' in process.env) { 
     var tenantId = process.env.TF_VAR_tenantId;
 } else {
     console.log('Tenant environment variable, TF_VAR_tenant not set');
